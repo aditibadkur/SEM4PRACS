@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Bg color change */
+        body{
+            background-color: aqua;
+        }
+        table, td{
+            border: 1px solid black;
+        }
+        @media (min-width: 480px) {
+            body{
+                background-color: lightgreen;
+            }   
+        }
+
+        /* Cols change */
+        .container {
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: calc(25% - 20px);
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 992px) {
+            .box {
+                width: calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HIII</h1>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="name">Name</label>
+            </td>
+            <td>
+                <input type="text" id="name" name="name" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="gender">Gender</label>
+            </td>
+            <td>
+                <input type="radio" id="gender" name="gender" value="male">
+                <label for="male">Male</label>
+                <br>
+                <input type="radio" id="gender" name="gender" value="female">
+                <label for="female">Female</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="eye">Eye Color</label>
+            </td>
+            <td>
+                <select id="eye" name="eye" required>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="brown">Brown</option>
+                    <option value="black">Black</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Check all that apply</td>
+            <td>
+                <input type="checkbox" id="chec" name="chec" value="6feet">
+                <label for="6feet">Over 6 feet</label>
+                <br>
+                <input type="checkbox" id="chec" name="chec" value="200pound">
+                <label for="200pound">Over 200 pounds</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" rowspan="1">
+                Describe your atheletic ability 
+                <br>
+                <textarea type="text" id="ability" name="ability" draggable="false"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="submit" id="submit">Enter your information</button>
+            </td>
+        </tr>
+
+    </table>
+    </form>
+    <div id="msg"></div>
+    <script src="./form.js"></script>
+</body>
+</html>
