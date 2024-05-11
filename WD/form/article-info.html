@@ -1,0 +1,42 @@
+<!--
+QUESTION: Design an html form to take the information of an article to be uploaded such as file path, author 
+name, type (technical, literary, general), subject topic (to be selected from a list) etc. One should 
+provide button to Submit as well as Reset the form contents
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+</head>
+<body>
+    <form>
+        <label for="name">Author Name: </label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="filepath">File Path: </label>
+        <input type="file" id="filepath" name="filepath" required>
+        <br>
+        <label for="Booktype">Book Type:</label>
+        <select id="Booktype" name="Booktype" required>
+            <option value="technical">Technical</option>
+            <option value="literary">Literary</option>
+            <option value="general">General</option>
+        </select>
+        <br>
+        <label for="subject">Subject Topic:</label>
+        <select id="subject" name="subject" required>
+            <option value="science">Science</option>
+            <option value="technology">Technology</option>
+            <option value="literature">Literature</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button> 
+    </form> 
+    <div id="msg"></div>
+    <script src="./article-info.js"></script>
+</body>
+</html>
