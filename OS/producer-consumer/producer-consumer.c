@@ -32,36 +32,6 @@ void consumer(){
     mutex = signal(mutex);
 }
 
-#include<stdio.h>
-#include<stdlib.h>
-int c, mutex=1, full=0, empty=10, count=0;
-
-int wait(int s){
-    return --s; // blocks semaphore
-}
-
-int signal(int s){
-    return ++s; // releases semaphore
-}
-
-void producer(){
-    mutex = wait(mutex); // block resource
-    full = signal(full);
-    empty = wait(empty);
-    count++;
-    printf("\nProducer produces item %d", count);
-    mutex = signal(mutex);
-}
-
-void consumer(){
-    mutex = wait(mutex); // block resource
-    full = wait(full);
-    empty = signal(empty);
-    printf("\nConsumer consumes item %d", count);
-    count--;
-    mutex = signal(mutex);
-}
-
 void main(){
     int arr[20] = {1, 2};
     while(1){
