@@ -1,5 +1,3 @@
-// Criteria: BT 
-// Always NP if we try to make this preemptive then it becomes SRTF
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 4

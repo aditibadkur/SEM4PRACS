@@ -1,5 +1,3 @@
-// basics so no preemption
-
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 4

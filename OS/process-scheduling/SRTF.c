@@ -47,23 +47,3 @@ void main(){
     BT[10] = 999;
     srtf();
 }
-
-// void srtf(){
-//     sort(AT); // 1st sort acc to AT
-//     for(i=0;i<SIZE;i++){
-//         BT[i] -= 1;
-//         // calc CT correctly!
-//         sort(BT);
-
-//         if(BT[i] == 0){ // calc final
-//             TATime[i] = CT[i] - AT[i];
-//             WT[i] = TATime[i] - bt[i];
-//             total_TAT += TATime[i];
-//             total_WT += WT[i];
-//             i++;
-//         }
-
-//         srtf();
-//     }
-//     print();
-// }
