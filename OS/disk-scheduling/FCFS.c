@@ -1,40 +1,48 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define SIZE 7
-int i, j, head=50, idx, initial=0, choice, totalMov=0;
-int tracks[SIZE] = {82, 170, 43, 140, 24, 16, 190};
-int visited[SIZE], movement[SIZE];
+#define n 7
+int i, j, idx, total_mov=0, initial, choice, head=50, SIZE;
+int tracks[n] = {82, 170, 43, 140, 24, 16, 190};
 
-void print(int tracks[]){
-    for(i=0;i<SIZE;i++){
-        printf("%d\t", tracks[i]);
+void print(int arr[]){
+    for(i=0;i<n;i++){
+        printf("%d\t", arr[i]);
     }
+    printf("\n");
+}
+
+void sort(int arr[]){
+    for(i=0;i<n;i++){
+        for(j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                int temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    print(tracks);
 }
 
 void fcfs(){
     print(tracks);
-    for(i=0;i<SIZE;i++){ // for finding head ka idx
-        if(head<=tracks[i]){
+    for(i=0;i<n;i++){ // for finding index
+        if(head<tracks[i]){
             idx = i;
             break;
         }
     }
-    printf("\n");
-    printf("%d -> ", head);
-
-    for(i=idx;i<SIZE;i++){ // 3 4 5 6 
-        printf("%d -> ", tracks[i]);
-        totalMov += abs(tracks[i] - initial);
-        initial = tracks[i];
-    }
-    for(i=0;i<idx;i++){ // 1 2 
-        printf("%d -> ", tracks[i]);
-        totalMov += abs(tracks[i] - initial);
-        initial = tracks[i];
-    }
     
+    initial = head;
+    printf("%d -> ", head);
+    for(i=0;i<n;i++){
+        printf("%d -> ", tracks[i]);
+        total_mov += abs(tracks[i] - initial);
+        initial = tracks[i];
+    }
     printf("end");
-    printf("\nTotal Movement: %d", totalMov-head);
+    printf("\nTotal Mov: %d", total_mov);
+    
 }
 
 void main(){
