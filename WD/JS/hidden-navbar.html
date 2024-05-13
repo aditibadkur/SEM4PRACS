@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .navbar{
+            background-color: aqua;
+            height: 100px;
+        }
+        .msg{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar" id="navbar">
+            THIS IS NAVBAR
+        </div>
+        THIS IS BODY
+        <div class="msg"></div>
+    </div>
+    <script>
+        const msg = document.querySelector('.msg');
+        const nav = document.querySelector('#navbar');
+        nav.addEventListener("mouseover", function(){
+            nav.style.display = "none";
+            msg.innerHTML="Hiddenn";
+        })
+        nav.addEventListener("mouseout", function(){
+            nav.style.display = "block";
+            msg.innerHTML="We're backkk";
+        })
+    </script>
+</body>
+</html>

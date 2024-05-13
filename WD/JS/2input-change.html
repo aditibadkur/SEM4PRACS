@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter a word</h2>
+        <input id="word">
+        <div class="msg"></div>
+        <button id="btn" type="submit">Submit</button>
+    </div>
+    <script>
+        const msg = document.querySelector('.msg');
+        const btn = document.getElementById('btn');
+        const word = document.getElementById('word');
+        const previousWords = ['hit', 'my'];
+
+        btn.addEventListener("click", function(){
+            word.style.backgroundColor = 'pink';
+        });
+
+        word.addEventListener('input', function() {
+            const currentValue = word.value.trim();
+            if (currentValue !== '') {
+                if (previousWords.includes(currentValue)) {
+                    msg.innerHTML = `<span style="color: red;">${currentValue}</span>`;
+                } else {
+                    previousWords.push(currentValue);
+                    msg.innerHTML = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
