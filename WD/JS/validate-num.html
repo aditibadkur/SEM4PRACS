@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter a character</h2>
+        <input id="n1">
+        <button id="btn">Submit</button>
+        <div class="msg"></div>
+    </div>
+    <script>
+        const msg = document.querySelector('.msg');
+        const btn = document.getElementById('btn');
+        
+        btn.addEventListener("click", function(){
+            const n1 = document.getElementById('n1').value;
+            if(isNaN(n1)){
+                msg.innerHTML="Given input is NaN";
+            }
+            else{
+                msg.innerHTML = "Good to go!";
+            }
+        })
+    </script>
+</body>
+</html>

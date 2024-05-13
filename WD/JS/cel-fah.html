@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input id="cel">
+        <button id="cel-btn" onclick="toFah()">To Fahrenheit</button>
+        <div class="msg-cel"></div>
+        <input id="fah">
+        <button id="fah-btn" onclick="toCel()">To Celsius</button>
+        <div class="msg-fah"></div>
+    </div>
+    <script>
+        function toFah(){
+            const msg = document.querySelector('.msg-cel');
+            const num = document.querySelector('#cel').value;
+            const ans = 9*(num/5)+32;
+            msg.innerHTML=ans+"F";
+        }
+
+        function toCel(){
+            const msg = document.querySelector('.msg-fah');
+            const num = document.querySelector('#fah').value;
+            const ans = 5*((num-32)/9);
+            msg.innerHTML=ans+"C";
+        }
+    </script>
+</body>
+</html>

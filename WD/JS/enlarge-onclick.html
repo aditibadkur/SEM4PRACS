@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <img src="./picture.jpeg" alt="img">
+    <script>
+        const image = document.querySelector('img');
+        image.addEventListener("mouseover", function(){
+            image.style.transform="scale(1.2)";
+        })
+        image.addEventListener("mouseout", function(){
+            image.style.transform="scale(1)";
+        })
+    </script>
+</body>
+</html>

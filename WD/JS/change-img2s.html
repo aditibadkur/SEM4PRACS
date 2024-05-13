@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <img src="./frnds.jpeg" alt="img">
+    <script>
+        const image = document.querySelector('img');
+        const pics = ["frnds.jpeg", "arcade.jpeg", "picture.jpeg"];
+        let num=0;
+        function changeImg(){
+            num = (num+1)%pics.length;
+            image.src=pics[num];
+        }
+        setInterval(changeImg, 2000);
+    </script>
+</body>
+</html>

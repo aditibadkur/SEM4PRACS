@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Enter 2 numbers</h3>
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+        <button type="submit" id="bt">Submit</button>
+        <div class="msg"></div>
+    </div>
+    <script>
+        const bt = document.querySelector('#bt');
+        const msg = document.querySelector('.msg');
+        bt.addEventListener('click', onsubmit);
+
+        function onsubmit(e){
+            e.preventDefault();
+            const n1 = document.querySelector('#n1').value;
+            const n2 = document.querySelector('#n2').value;
+            const ans = n1>n2?n1:n2;
+            console.log(ans);
+            msg.innerHTML = "Largest: "+ans;
+        }
+    </script>
+</body>
+</html>

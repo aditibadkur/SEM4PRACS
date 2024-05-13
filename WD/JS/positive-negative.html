@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter 2 num</h2>
+        <input id="n1">
+        <input id="n2">
+        <button id="result" onclick="result()">Check!</button>
+        <div class="msg"></div>
+    </div>
+    <script>
+        const msg = document.querySelector('.msg');
+        function result(){
+            const n1 = document.getElementById('n1').value;
+            const n2 = document.getElementById('n2').value;
+            if(n1>0 && n2>0){
+                msg.innerHTML="Both are +ve";
+            }
+            else if(n1>0 && n2<0){
+                msg.innerHTML="n1 is +ve";
+            }
+            else if(n1<0 && n2>0){
+                msg.innerHTML="n2 is +ve";
+            }
+            else{
+                msg.innerHTML="Both are -ve";
+            }
+        }
+    </script>
+</body>
+</html>

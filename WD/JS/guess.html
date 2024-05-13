@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Guess the number</h2>
+        <input id="guess">
+        <button id="result" onclick="result()">Check!</button>
+        <div class="msg"></div>
+    </div>
+    <script>
+        const num = Math.floor(Math.random()*10);
+        const msg = document.querySelector('.msg');
+
+        function result(){
+            const guess = document.getElementById('guess').value;
+            if(guess == num){
+                msg.innerHTML="Good Work!";   
+            }
+            else{
+                msg.innerHTML="Better luck next time (ans was "+num+")";
+            }
+        }
+    </script>
+</body>
+</html>
