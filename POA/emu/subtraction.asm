@@ -1,0 +1,11 @@
+MOV AX, 02H
+MOV BX, 03H
+
+MOV CL, [1004H]
+
+SUB AX, BX
+MOV [1006H], AX   
+JC jump
+INC CL
+jump: MOV [1006H], CL  
+HLT
