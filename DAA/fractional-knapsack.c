@@ -64,24 +64,6 @@ void knapsack(){
         }
     }
     printf("Total value of items in the knapsack: %.2f\n", totalValue);
-
-    // printf("\nTarget wt %d", maxWt);
-    // int count = 0, maxRatio, maxRatioIndex, remaining=18;
-    // while(count<SIZE){
-    //     for(i=0;i<SIZE-1;i++){
-    //         if(visited[i] == 0){
-    //             maxRatio = ratio[i]>ratio[i+1]?ratio[i]:ratio[i+1];
-    //             maxRatioIndex = ratio[i]>ratio[i+1]?i:i+1;
-    //         }
-    //     }
-    //     remaining -= W[maxRatioIndex];
-    //     printf("\nMax ratio found at index %d", maxRatioIndex);
-    //     printf("\nRemaining wt: %d", remaining);
-    //     visited[maxRatioIndex] = 1;
-    //     count++;
-    // }
-
-
 }
 
 void main(){
